@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Plaid;
+use App\Http\Livewire\PlaidDeferred;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/plaid-deferred', PlaidDeferred::class);
 Route::get('/plaid', Plaid::class);
 
 Route::get('/dashboard', function () {
